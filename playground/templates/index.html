@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        #wrapper {
+            margin: 0px auto;
+            align-content: center;
+            display: block;
+            width: 1000px;
+        }
+
+        h1 {
+            display: block;
+            text-align: center;
+        }
+
+        .box {
+            width: 23%;
+            height: 230px;
+            background-color: darkcyan;
+            margin: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome!<br></br> Try adding more boxes with /(your favorite number), or pick a color after that!: /(your number)/(your favorite color)</h1>
+    <div id=wrapper>
+        {%if num == undefined and color == undefined: %}
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        {%else%}
+            {% for x in range(num): %}
+            <div class="box"style="background-color:{{color}};"></div>
+            {% endfor %}
+        {% endif %}
+
+
+    </div>
+
+</body>
+
+</html>
